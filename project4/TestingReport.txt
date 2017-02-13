@@ -1,0 +1,7 @@
+To test the underlying functionality of the board, the getters and setters were tested, as well as the methods to make moves and check validity. The code for checking the validity of moves is very similar to the code that makes the move; the only difference is the second loop, so testing makeMove a couple times should be enough, as checkValidity was tested extensively through possibleMoves. In possibleMoves' test, the issue of running off the page while checking, hitting an empty square, and flipping in multiple directions are all addressed.
+
+All graphics testing was done by extensively playing the game.  All branches of if statements have been executed several times throughout test playing, and the scaling has been verified to work properly at reasonable sizes through testing.
+
+There is a test for BB2, part of the extra credit, so some of the methods in it are used for generating more complex boards to test the Board class.  I could not figure out a good way to test the functions in the extra credit, so it is possible they do not work as they should.
+
+The graphics for the AI versions do not update until the move is played by the computer, and they can occasionally be glitchy.  It is sometimes difficult to determine whether or not the computer works properly visually, so I have tested by playing games against an app on my phone, and so far, all moves appear to work properly.

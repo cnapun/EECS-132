@@ -1,0 +1,7 @@
+For the extra credit, I made the board look nicer using ImageIcons and wrote two AI players.
+
+The first one, ReversiAIWeak, uses a simple evaluation function and is unwieldy due to the use of arrays.  I copied methods from Board for determining moves, only changing it from modifying the state to returning a new state.  The benefit to this one is that it works on any board size.
+
+The other is BitBoardAI.  It represents the board as two longs, and does calculations using them.  Operations are done bitwise, hence the name bitboard.  The evaluation function for this one uses many more features, thanks to the ease of applying masks, but the weights are not ideal.  At one point, it worked extremely well, and consistently beat the app on my phone, but some functions did not work properly, and in fixing them, I made the evaluation function worse.  It still is quite good, but due to the representation, it is limited to 8x8 boards.
+
+The proper values to initialize each type of game are given in the javadoc comments for the main methods.
