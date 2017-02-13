@@ -1,0 +1,15 @@
+DoubleLinkedListTester:
+The first five test methods were provided with the lab, and they are included to ensure basic functionality of the list.
+testListIteratorBothDirections uses the iterator to traverse the list both forwards and backwards, checking that the correct value is accessed every time.  Values in all positions (front, back, middle) are checked.
+testListIteratorSet runs through a bunch of lengths of list and iterates through, setting the elements to different values after going forwards and backwards, triggering each part of the conditionals.
+testAppend tests the functionality of the append method with lists of varying lengths, covering all branches of the conditionals.  The final step is to verify that there are not too many elements (throws a NullPointerException).
+testEquals tests all three possible exit points from the method, and both possibilities in the first if statement
+
+DNATest:
+testBase tests all methods and all possible directions of execution in Base because there are few possible options.  Each if statement is triggered twice (once for the invalid character)
+testCompareTo tests all possible exits from the method and ensures that their values are correct
+testString2DNA makes sure that exceptions are thrown as they should be and also tests a string of length 1 to ensure it works correctly
+testSplice tests the case where the second DNA is not at all included, and also conventional cases with a single base and a single removal
+testOverlaps tests the initial if statement, as well as several other cases, including asymmetric sequences, full overlap, no overlap, single character, and many characters.
+testToString has only two tests because the toString method is quite straightforward, with no if statements.  "GATTACA" tests many, "T" tests 1, and the empty list tests 0.
+The main method is tested by testing both forward and backwards possibilities, with no overlap, an overlap of 1, and complete overlap.

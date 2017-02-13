@@ -1,0 +1,28 @@
+Nikil Pancha
+
+ComplexNTest:
+    The getters for real and imaginary parts and constructors are tested together, making sure the values are properly stored and retrieved
+    The toString method has two possible branches of if statement, one with positive imaginary part, one with negative.  Both are tested
+    The equals method has two parts: type and numerical equality.  The first test tests the equality of the real and imaginary parts with a small delta, and the second tests to make sure other types of object don't break it
+
+RealNTest:
+    Tests the actual value getter and checks to make sure the imaginary part is zero, verifying the functionality of the constructor
+    Tests the toString method with both positive and negative numbers in case they are treated differently as strings
+
+RationalNTest:
+    Numerator and denominator getters are tested with both simplest form and negatives to make sure the negative is transferred to the numerator where necessary.  All branches of the if statements in the constructor are executed, and in a separate test, the ArithmeticException when the denominator is zero is tested
+    The equals method is inherited, and testing it verifies that the parent constructor is correctly called
+    The toString test verifies that negative signs are displayed in the numerator when necessary.  Both branches of the if statement are executed.
+    The getDoubleValue test verifies that the correct value is stored as a double.
+
+IntegerN:
+    The constructor and getter are tested with this one case.  All other methods are inherited, and if getNumerator() and getIntValue() return the same thing, it is a RationalN with denominator and will work with all of the same methods as RationalN.
+
+NaturalN:
+    Test constructor to make sure it works as it should with no exception thrown
+    Test constructor with negative number to verify it throws an ArithmeticException
+
+Arithmetic:
+    The test cases in this class all follow the same pattern with the exception of those that check for exceptions.  There is at least one test for each method in Arithmetic, and then there are several other tests of results that are not necessary, but good to see.  The same several numbers are used for convenience in each test case
+    Testing for divide by zero can be done with any child of ComplexN; NaturalN was chosen randomly.
+    Testing for negative NaturalN after subtraction is done with a single example with an ArithmeticException expected. 
